@@ -5,3 +5,20 @@
 
 // Saída
 // Mostre a respectiva mensagem após a validação dos valores.
+
+import 'dart:io';
+
+void main(List<String> args) {
+  List i = stdin.readLineSync()!.split(" ").map(int.parse).toList();
+
+  int a = i[0];
+  int b = i[1];
+  int c = i[2];
+  int d = i[3];
+
+  if((b > c) && (d > a) && (c + d) > (a + b) && (c >= 1) && (d >= 1) && (a % 2 == 0)) {
+    print("Valores aceitos");
+  }else {
+    print("Valores nao aceitos");
+  }
+}
